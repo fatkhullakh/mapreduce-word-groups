@@ -134,6 +134,10 @@ public class WordGroups {
     hadoop jar ./target/wordgroups-1.0-SNAPSHOT.jar mapreduce.WordGroups /user/adampap/Frankenstein /user/bigdata48/midterm_output
     hdfs dfs -cat /user/bigdata48/midterm_output/part*
     hdfs dfs -rm -r /user/bigdata48/midterm_output
+
+    hdfs dfs -cat /user/bigdata48/midterm_unsorted/part* | sort -nr > sorted_output.txt
+    head -n 11 sorted_output.txt
+
     
     <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
